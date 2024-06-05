@@ -78,8 +78,8 @@ export default function Ocorrencia() {
         <br />
       </div>
 
-      <div className="botao">
-        <button> Enviar </button>
+      <div className="button">
+        <button className="ButtonE"> Enviar </button>
       </div>
       <br />
       <br />
