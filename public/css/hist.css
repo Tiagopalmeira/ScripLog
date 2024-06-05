@@ -1,0 +1,52 @@
+.topo {
+  padding-top:1% ;
+  padding-bottom: 1%;
+  align-items: center;
+  text-align: center;
+  font-size: 100%;
+  background-color: #120F9E;
+  color: #ffffff;
+  margin-bottom: 10px;
+  height: auto;
+  width: 100%;
+  margin: 0;
+  position: fixed; /* Define a posição fixa */
+  top: 0; /* Fixa a barra de navegação no topo */
+  left: 0; /* Fixa a barra de navegação na lateral esquerda */
+  z-index: 1000; /* Garante que a barra de navegação esteja acima de outros elementos */
+}
+
+.navbar h2{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f2f2f2;
+}
+.container {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.historico-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.historico-table th,
+.historico-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.historico-table th {
+  background-color: #f2f2f2;
+}
+
+.historico-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.historico-table tr:hover {
+  background-color: #f2f2f2;
+}
