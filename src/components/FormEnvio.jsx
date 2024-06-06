@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import QRScanner from "./LeituraCodigo";
-import { FcInspection } from "react-icons/fc";
-import { AiOutlineBarcode } from "react-icons/ai";
-import Accordion1 from "./accordion"; // Importe o componente Accordion
-import Ocorrencia from "./RegistroOCR"; // Importe o componente de ocorrência
-import "../../public/css/form.css";
+import React, { useState } from 'react';
+import QRScanner from './LeituraCodigo';
+import { FcInspection } from 'react-icons/fc';
+import { AiOutlineBarcode } from 'react-icons/ai';
+import Accordion1 from './accordion'; // Importe o componente Accordion
+import Ocorrencia from './RegistroOCR'; // Importe o componente de ocorrência
+import '../../public/css/form.css';
 
 export default function FormEnvio() {
   const [showQRScanner, setShowQRScanner] = useState(false);
@@ -32,9 +32,9 @@ export default function FormEnvio() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Formulário enviado!");
+    console.log('Formulário enviado!');
     setEnviado(true);
-    window.alert("Tudo Ok! Seu formulário foi enviado.");
+    window.alert('Tudo Ok! Seu formulário foi enviado.');
     event.target.reset(); // Limpa o formulário após o envio bem-sucedido
   };
 
@@ -69,18 +69,10 @@ export default function FormEnvio() {
           <ul>
             <li>
               <span className="textointerno"> Razão social:</span>
-              <input
-                type="text"
-                className="inputtext"
-                placeholder="Digite a razão social da empresa."
-              />
+              <input type="text" className="inputtext" placeholder="Digite a razão social da empresa." />
               <br />
               <span className="textointerno"> CNPJ:</span>
-              <input
-                type="text"
-                className="inputtext"
-                placeholder="Digite o CNPJ da empresa."
-              />
+              <input type="text" className="inputtext" placeholder="Digite o CNPJ da empresa." />
               <br />
             </li>
           </ul>
@@ -93,31 +85,14 @@ export default function FormEnvio() {
               <span className="textointerno"> Data da entrega:</span>
               <input type="date" className="data" /> <br />
               <span className="textointerno"> Status final:</span>
-              <input
-                type="radio"
-                name="situacao"
-                id="entregue"
-                checked={entregue}
-                onChange={handleEntregueChange}
-              />{" "}
-              Entregue
-              <input
-                type="radio"
-                name="situacao"
-                id="naoRealizada"
-                checked={naoRealizada}
-                onChange={handleNaoRealizadaChange}
-              />{" "}
-              Não realizada <br />
+              <input type="radio" name="situacao" id="entregue" checked={entregue} onChange={handleEntregueChange} /> Entregue
+              <input type="radio" name="situacao" id="naoRealizada" checked={naoRealizada} onChange={handleNaoRealizadaChange} /> Não
+              realizada <br />
             </li>
           </ul>
         </div>
 
-        {naoRealizada && (
-          <Accordion1
-            items={[{ title: "Clique aqui e declare a ocorrência da entrega.", content: <Ocorrencia /> }]}
-          />
-        )}
+        {naoRealizada && <Accordion1 items={[{ title: 'Clique aqui e declare a ocorrência da entrega.', content: <Ocorrencia /> }]} />}
 
         <span className="titulo"> Registros da entrega:</span>
         <div className="box">
@@ -130,7 +105,10 @@ export default function FormEnvio() {
         </div>
 
         <div className="button">
-          <button type="submit" className="buttonE"> Enviar </button>
+          <button type="submit" className="buttonE">
+            {' '}
+            Enviar{' '}
+          </button>
         </div>
       </form>
     </div>

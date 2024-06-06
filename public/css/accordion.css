@@ -1,56 +1,54 @@
 /* Estilos para o accordion */
 .accordion {
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-top: 15%; /* Ajusta o espaçamento superior */
-  }
-  
-  .accordion-item {
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .accordion-title {
-    background-color: #120F9E;
-    color: #ffffff;
-    padding: 15px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .accordion-content {
-    padding: 15px;
-    background-color: #f9f9f9;
-  }
-  
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 15%; /* Ajusta o espaçamento superior */
+}
 
-  .accordion-content .data {
-    color: #676767d0;
-    font-size: 110%;
-    width: auto;
-    font-family: Helvetica, sans-serif;
-    margin-top: 3%;
-    margin-bottom: 3%;
-  }
-  
-  /* Estilos para o botão de envio */
-  .accordion-content .buttonE {
-    font-size: 1rem;
-    padding: 1rem 4rem;
-    margin-top: 5%;
-    background-color: #120F9E;
-    color: #ffffff;
-    border: 1px solid #67676756;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-  
-  /* Estilos para o ícone dentro do botão */
-  .accordion-content .buttonE span {
-    text-align: center;
-    align-self: center;
-    align-content: center;
-    margin-left: 5px;
-  }
-  
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-title {
+  background-color: #120f9e;
+  color: #ffffff;
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.accordion-content {
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.accordion-content .data {
+  color: #676767d0;
+  font-size: 110%;
+  width: auto;
+  font-family: Helvetica, sans-serif;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+/* Estilos para o botão de envio */
+.accordion-content .buttonE {
+  font-size: 1rem;
+  padding: 1rem 4rem;
+  margin-top: 5%;
+  background-color: #120f9e;
+  color: #ffffff;
+  border: 1px solid #67676756;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Estilos para o ícone dentro do botão */
+.accordion-content .buttonE span {
+  text-align: center;
+  align-self: center;
+  align-content: center;
+  margin-left: 5px;
+}

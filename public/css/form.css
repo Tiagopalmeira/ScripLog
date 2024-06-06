@@ -4,7 +4,7 @@
   align-items: center;
   text-align: center;
   font-size: 150%;
-  background-color: #120F9E;
+  background-color: #120f9e;
   color: #ffffff;
   margin-bottom: 10px;
   height: auto;
@@ -24,7 +24,6 @@ body {
   background-color: white;
   color: #676767;
 }
-
 
 .principal {
   padding: 20px;
@@ -74,9 +73,7 @@ body {
   border: 1px solid #67676770;
   border-radius: 10px;
   cursor: pointer;
-
 }
-
 
 .box {
   max-width: 500px;
@@ -87,8 +84,6 @@ body {
   border-radius: 10px;
 }
 
-
-
 .inputtext {
   width: 100%;
   padding: 10px;
@@ -98,7 +93,6 @@ body {
 }
 
 .button-container {
-
   justify-content: space-between;
   margin-bottom: 20px;
 }
@@ -118,7 +112,6 @@ body {
   margin-right: 0;
 }
 
-
 .titulo {
   font-weight: bold;
   margin-top: 20px;
@@ -137,7 +130,6 @@ body {
   background-color: #f9f9f9;
 }
 
-
 .textointerno {
   display: block;
   margin-bottom: 5px;
@@ -146,7 +138,6 @@ body {
 
 .inputtext,
 .inputtextG {
-
   width: 95%;
   padding: 0.5rem;
   padding-right: 0px;
@@ -159,8 +150,7 @@ body {
   margin-right: 10%;
 }
 
-
-input[type="radio"] {
+input[type='radio'] {
   transform: scale(1.5);
   margin-left: 1%;
 }
@@ -182,7 +172,6 @@ input[type="radio"] {
 
 .box ul,
 .box ol {
-
   list-style-type: none;
 }
 
@@ -207,7 +196,6 @@ input[type="radio"] {
   text-align: center;
 }
 
-
 .button {
   display: flex;
   justify-content: center;
@@ -221,7 +209,7 @@ input[type="radio"] {
   /* Ajusta o padding para esticar o botão */
   margin: 0 2%;
   /* Adiciona margem nos lados para espaçamento */
-  background-color: #120F9E;
+  background-color: #120f9e;
   color: #ffffff;
   border: 1px solid #67676756;
   border-radius: 10px;
@@ -229,12 +217,12 @@ input[type="radio"] {
 }
 
 .topo {
-  padding-top:5% ;
+  padding-top: 5%;
   padding-bottom: 5%;
   align-items: center;
   text-align: center;
   font-size: 150%;
-  background-color: #120F9E;
+  background-color: #120f9e;
   color: #ffffff;
   margin-bottom: 10px;
   height: auto;
@@ -246,184 +234,172 @@ input[type="radio"] {
   z-index: 1000; /* Garante que a barra de navegação esteja acima de outros elementos */
 }
 
-body{
-    background-color: white;
-    color: #676767;
+body {
+  background-color: white;
+  color: #676767;
 }
-
 
 .principal {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  .leitura {
-    margin-left: 17%;
-    align-self: center;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .leitura12 button {
-    font-family: Arial, Helvetica, sans-serif;
-    border:1px solid #ccc;
-    border-radius: 05%;
-    margin-top: 10px;
-    background-color: green;
-    padding: 10px 10px;
-    color: #f9f9f9;
-    margin-left: 17%;
-    align-self: center;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-
-  .caixinha{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 10%;
-    font-size:75%;
-    color: rgb(95, 95, 95);
-    border: 1px solid;
-  }
-  
-  .leitura button { 
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente os elementos dentro do contêiner .leitura */
-    margin-top: 30%; /* Mantém o espaçamento superior */
-    padding: 10px 20px;
-    background-color: #ffffff;
-    color: #676767;
-    border: 1px solid #67676770;
-    border-radius: 10px;
-    cursor: pointer;
-
-  }
-  
-
-  .box {
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 2px solid #333;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-  }
-  
- 
-  
-  .inputtext {
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .button-container {
-    
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .button-container button {
-    padding: 10px 20px;
-    background-color: #ffffff;
-    color: #676767;
-    border: 1px solid #67676770;
-    border-radius: 10px;
-    cursor: pointer;
-    flex-grow: 1;
-    margin-right: 10px;
-  }
-  
-  .button-container button:last-child {
-    margin-right: 0;
-  }
-  
-  
-  .titulo {
-    font-weight: bold;
-    margin-top: 20px;
-    display: block;
-  }
-  
-  .box {
-    border: 0.1rem solid #67676770; /* Convertido para rem */
-    border-radius: 1rem; /* Convertido para rem */
-    padding: 1rem; /* Convertido para rem */
-    margin-bottom: 1.5rem; /* Convertido para rem */
-    background-color: #f9f9f9;
-  }
-  
-
-  .textointerno {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .inputtext,
-  .inputtextG {
-
-    width: 95%;
-    padding: 0.5rem;
-    padding-right: 0px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  .textointerno{
-    margin-right: 10%;
-  }
-
-
-input[type="radio"] {
-    transform: scale(1.5); 
-    margin-left: 5%;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
-  .inputtextG {
-    height: 100px;
-  }
-  
-  .data {
-    color: #676767d0;
-    font-size: 110%;
-    border: 1px solid #67676770;
-    border-radius: 5px;
-    width: auto;
-    font-family: Helvetica, sans-serif;
-    margin-bottom: 3%;
-    margin-top: 3%;
-  }
-  
+
+.leitura {
+  margin-left: 17%;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.leitura12 button {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 05%;
+  margin-top: 10px;
+  background-color: green;
+  padding: 10px 10px;
+  color: #f9f9f9;
+  margin-left: 17%;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.caixinha {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10%;
+  font-size: 75%;
+  color: rgb(95, 95, 95);
+  border: 1px solid;
+}
+
+.leitura button {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente os elementos dentro do contêiner .leitura */
+  margin-top: 30%; /* Mantém o espaçamento superior */
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #676767;
+  border: 1px solid #67676770;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.box {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #333;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.inputtext {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button-container {
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #676767;
+  border: 1px solid #67676770;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.button-container button:last-child {
+  margin-right: 0;
+}
+
+.titulo {
+  font-weight: bold;
+  margin-top: 20px;
+  display: block;
+}
+
+.box {
+  border: 0.1rem solid #67676770; /* Convertido para rem */
+  border-radius: 1rem; /* Convertido para rem */
+  padding: 1rem; /* Convertido para rem */
+  margin-bottom: 1.5rem; /* Convertido para rem */
+  background-color: #f9f9f9;
+}
+
+.textointerno {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.inputtext,
+.inputtextG {
+  width: 95%;
+  padding: 0.5rem;
+  padding-right: 0px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.textointerno {
+  margin-right: 10%;
+}
+
+input[type='radio'] {
+  transform: scale(1.5);
+  margin-left: 5%;
+}
+.inputtextG {
+  height: 100px;
+}
+
+.data {
+  color: #676767d0;
+  font-size: 110%;
+  border: 1px solid #67676770;
+  border-radius: 5px;
+  width: auto;
+  font-family: Helvetica, sans-serif;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
 .box ul,
 .box ol {
-  
   list-style-type: none;
 }
 
 .centralizado {
-    background-color: #f9f9f9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .leitura button span {
-    text-align: center;
-    align-self: center;
-    align-content: center;
-    margin-left: 5px;
-    align-items: center;
-  }
-.base h6{
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leitura button span {
+  text-align: center;
+  align-self: center;
+  align-content: center;
+  margin-left: 5px;
+  align-items: center;
+}
+.base h6 {
   margin-top: 100%;
   color: #676767;
   text-align: center;
 }
-  
-  
+
 .button {
   display: flex;
   justify-content: center;
@@ -434,11 +410,9 @@ input[type="radio"] {
   font-size: 1rem;
   padding: 1rem 4rem; /* Ajusta o padding para esticar o botão */
   margin: 0 2%; /* Adiciona margem nos lados para espaçamento */
-  background-color: #120F9E;
+  background-color: #120f9e;
   color: #ffffff;
   border: 1px solid #67676756;
   border-radius: 10px;
   cursor: pointer;
 }
-
-

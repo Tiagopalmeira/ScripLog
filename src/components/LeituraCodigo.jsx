@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Html5QrcodeScanner } from "html5-qrcode"; // Importa o componente Html5QrcodeScanner
-import "../../public/css/form.css"; // Importa o arquivo de estilos CSS
+import React, { useState, useEffect } from 'react';
+import { Html5QrcodeScanner } from 'html5-qrcode'; // Importa o componente Html5QrcodeScanner
+import '../../public/css/form.css'; // Importa o arquivo de estilos CSS
 
 function QRScanner() {
   const [isCameraActive, setIsCameraActive] = useState(false);
-  const [qrCodeText, setQrCodeText] = useState("");
+  const [qrCodeText, setQrCodeText] = useState('');
 
   useEffect(() => {
     if (isCameraActive) {
@@ -14,7 +14,7 @@ function QRScanner() {
 
   const startQrScanner = () => {
     const html5QrCodeScanner = new Html5QrcodeScanner(
-      "reader",
+      'reader',
       { fps: 10, qrbox: { width: 400, height: 400 } },
       false // verbose
     );
@@ -24,7 +24,7 @@ function QRScanner() {
         setQrCodeText(decodedText);
       },
       (errorMessage) => {
-        console.error("Erro ao escanear: " + errorMessage);
+        console.error('Erro ao escanear: ' + errorMessage);
       }
     );
 
@@ -40,7 +40,7 @@ function QRScanner() {
   const handleFileInputChange = (e) => {
     const file = e.target.files[0];
     const html5QrCodeScanner = new Html5QrcodeScanner(
-      "reader",
+      'reader',
       { fps: 10, qrbox: { width: 150, height: 50 } },
       false // verbose
     );
@@ -53,7 +53,7 @@ function QRScanner() {
         setQrCodeText(decodedText);
       },
       (errorMessage) => {
-        console.error("Erro ao escanear o arquivo: ", errorMessage);
+        console.error('Erro ao escanear o arquivo: ', errorMessage);
       }
     );
   };
@@ -63,12 +63,16 @@ function QRScanner() {
     <div className="box">
       <div id="reader"></div>
 
-      <input type="file" accept="image/*" onChange={handleFileInputChange} style={{ display: "none" }} />
+      <input type="file" accept="image/*" onChange={handleFileInputChange} style={{ display: 'none' }} />
 
       {/* Botões para selecionar a fonte do código QR */}
       <div className="button-container">
-        <button onClick={handleStartCamera} disabled={isCameraActive}>Selecionar NFE</button>
-        <button onClick={() => document.querySelector('input[type="file"]').click()} disabled={isCameraActive}>Selecionar arquivo</button>
+        <button onClick={handleStartCamera} disabled={isCameraActive}>
+          Selecionar NFE
+        </button>
+        <button onClick={() => document.querySelector('input[type="file"]').click()} disabled={isCameraActive}>
+          Selecionar arquivo
+        </button>
       </div>
 
       {/* Campo para inserir ou exibir o número da NFE */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../public/css/form.css'
+import '../../public/css/form.css';
 
 const ContatoWhatsApp = () => {
   const handleWhatsAppRedirect = () => {
@@ -13,11 +13,13 @@ const ContatoWhatsApp = () => {
   };
 
   return (
-    <div className='caixinha'>
+    <div className="caixinha">
       <br />
       <br />
-      <div><h2>Acesse o botão abaixo para entrar em contato com o nosso suporte:</h2></div>
-      <div className='leitura12'>
+      <div>
+        <h2>Acesse o botão abaixo para entrar em contato com o nosso suporte:</h2>
+      </div>
+      <div className="leitura12">
         <button onClick={handleWhatsAppRedirect}>Falar com suporte via WhatsApp</button>
       </div>
     </div>

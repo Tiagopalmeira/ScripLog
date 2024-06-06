@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../public/css/hist.css'
+import '../../public/css/hist.css';
 const Historico = () => {
   const historicoData = [
     { id: '1', codigo: '158985', tipo: 'NFE' },
@@ -21,13 +21,13 @@ const Historico = () => {
     { id: '17', codigo: 'Pneu furado', tipo: 'OCR' },
     { id: '18', codigo: '152145', tipo: 'NFE' },
     { id: '19', codigo: '158985', tipo: 'NFE' },
-    { id: '20', codigo: 'Produtos vencidos', tipo: 'OCR' }
+    { id: '20', codigo: 'Produtos vencidos', tipo: 'OCR' },
   ];
 
   return (
     <div className="container">
-      <div className='topo'>
-      <h1>Histórico</h1>
+      <div className="topo">
+        <h1>Histórico</h1>
       </div>
       <br />
       <br />
@@ -44,7 +44,7 @@ const Historico = () => {
           </tr>
         </thead>
         <tbody>
-          {historicoData.map(item => (
+          {historicoData.map((item) => (
             <tr key={item.id}>
               <td>{item.id}</td>
               <td>{item.codigo}</td>
