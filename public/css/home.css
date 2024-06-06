@@ -1,0 +1,122 @@
+/* Estilos padrão */
+
+  
+ /* Redefinir margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos para a barra de navegação */
+  .navbar {
+    font-size: 70%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 10%;
+    padding: 35px 2%;
+    background-color: #120f9e;
+    width: 100%;
+    left: 0; /* Define a posição inicial como 0 */
+
+  }
+  .desejo{
+    width: auto;
+    height: auto;
+    font-size: 100%;
+    margin-left: 05%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #19355f;
+  }
+  .grid-container {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Reduz o tamanho mínimo das colunas */
+    grid-gap: 20px;
+    justify-items: center;
+
+  }
+  
+  .square-button {
+
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px; /* Tamanho menor para dispositivos móveis */
+    height: 150px; /* Tamanho menor para dispositivos móveis */
+    border: none;
+    background-color: #3168bb;
+    color: rgb(255, 255, 255);
+
+  }
+  
+  .square-button:hover {
+    background-color: #19355f;
+  }
+  
+  .square-button span {
+    margin-top: 10px;
+  }
+  
+  .exit-button {
+
+    padding: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px; /* Tamanho menor para dispositivos móveis */
+    margin: 20px auto;
+    border: none;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 15%;
+
+  }
+  
+  .exit-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .confirm-exit {
+    color: #19355f;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .confirm-exit button {
+    margin: 10px;
+  }
+  
+  .confirm-exit button.yes {
+    background-color: green;
+    color: white;
+  }
+  
+  .confirm-exit button.no {
+    background-color: red;
+    color: white;
+  }
+  
+
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .square-button {
+      width: 120px; 
+      height: 120px; 
+    }
+  
+    .exit-button {
+      width: 120px; 
+    }
+  }
+  
