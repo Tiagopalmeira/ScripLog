@@ -133,9 +133,6 @@ export default function FormEnvio() {
           <button type="submit" className="buttonE"> Enviar </button>
         </div>
       </form>
-
-
-
     </div>
   );
 }

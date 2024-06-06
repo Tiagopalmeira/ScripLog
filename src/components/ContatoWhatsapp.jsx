@@ -24,4 +24,4 @@ const ContatoWhatsApp = () => {
   );
 };
 
-export default ContatoWhatsApp;
+export default Cont
