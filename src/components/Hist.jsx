@@ -29,12 +29,7 @@ const Historico = () => {
       <div className="topo">
         <h1>Histórico</h1>
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
       <h3>Históricos recentes:</h3>
-      <br />
       <table className="historico-table">
         <thead>
           <tr>

@@ -8,19 +8,25 @@
 
 /* Estilos para a barra de navegação */
 .navbar {
-  font-size: 70%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-bottom: 10%;
-  padding: 35px 2%;
   background-color: #120f9e;
   width: 100%;
-  left: 0; /* Define a posição inicial como 0 */
+  padding: 10% 0;
+  h2 {
+    padding: 0 0 0 5%;
+    font-size: 1rem;
+  }
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .desejo {
   width: auto;
   height: auto;
-  font-size: 100%;
-  margin-left: 05%;
+  font-size: 1.5rem;
+  padding: 5% 0 5% 10%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #19355f;
 }

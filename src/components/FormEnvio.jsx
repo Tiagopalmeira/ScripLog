@@ -70,10 +70,8 @@ export default function FormEnvio() {
             <li>
               <span className="textointerno"> Razão social:</span>
               <input type="text" className="inputtext" placeholder="Digite a razão social da empresa." />
-              <br />
               <span className="textointerno"> CNPJ:</span>
               <input type="text" className="inputtext" placeholder="Digite o CNPJ da empresa." />
-              <br />
             </li>
           </ul>
         </div>
@@ -83,11 +81,14 @@ export default function FormEnvio() {
           <ul>
             <li>
               <span className="textointerno"> Data da entrega:</span>
-              <input type="date" className="data" /> <br />
+              <input type="date" className="data" />
               <span className="textointerno"> Status final:</span>
-              <input type="radio" name="situacao" id="entregue" checked={entregue} onChange={handleEntregueChange} /> Entregue
-              <input type="radio" name="situacao" id="naoRealizada" checked={naoRealizada} onChange={handleNaoRealizadaChange} /> Não
-              realizada <br />
+              <div className="radios_status">
+                <input type="radio" name="situacao" id="entregue" checked={entregue} onChange={handleEntregueChange} />
+                <label htmlFor="entregue">Entregue</label>
+                <input type="radio" name="situacao" id="naoRealizada" checked={naoRealizada} onChange={handleNaoRealizadaChange} />
+                <label htmlFor="naoRealizada">Não realizada</label>
+              </div>
             </li>
           </ul>
         </div>
@@ -96,18 +97,20 @@ export default function FormEnvio() {
 
         <span className="titulo"> Registros da entrega:</span>
         <div className="box">
-          <span className="textointerno"> Foto canhoto: </span>
-          <input type="file" accept="image/*" className="upload" />
-          <br />
-          <span className="textointerno"> Comprovação: </span>
-          <input type="file" accept="image/*" className="upload" />
-          <br />
+          <div className="box_upload">
+            {/* Remoção do <br/> e ajuste com gap*/}
+            <span className="textointerno"> Foto canhoto: </span>
+            <input type="file" accept="image/*" className="upload" />
+          </div>
+          <div className="box_upload">
+            <span className="textointerno"> Comprovação: </span>
+            <input type="file" accept="image/*" className="upload" />
+          </div>
         </div>
 
         <div className="button">
           <button type="submit" className="buttonE">
-            {' '}
-            Enviar{' '}
+            Enviar
           </button>
         </div>
       </form>

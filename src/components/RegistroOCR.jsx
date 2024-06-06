@@ -76,19 +76,26 @@ export default function Ocorrencia() {
                 value={formData.localOcorrencia}
                 onChange={handleChange}
               />
-              <br />
               <span className="textointerno"> Ocorrido em cliente?</span>
-              <input type="radio" name="ocorridoEmCliente" id="ocorridoSim" value="Sim" onChange={handleChange} /> Sim
-              <input type="radio" name="ocorridoEmCliente" id="ocorridoNao" value="Não" onChange={handleChange} /> Não
+              <div className="radios_status">
+                <input type="radio" name="ocorridoEmCliente" id="ocorridoSim" value="Sim" onChange={handleChange} />
+                <label htmlFor="">Sim</label>
+                <input type="radio" name="ocorridoEmCliente" id="ocorridoNao" value="Não" onChange={handleChange} />
+                <label htmlFor="">Não</label>
+              </div>
             </li>
           </ul>
         </div>
 
         <span className="titulo">Gravidade da ocorrência</span>
         <div className="box">
-          <span className="textointerno"> Impede a entrega?</span> <br />
-          <input type="radio" id="ocorridoGravidadeSim" name="impedeEntrega" value="Sim" onChange={handleChange} /> Sim
-          <input type="radio" id="ocorridoGravidadeNao" name="impedeEntrega" value="Não" onChange={handleChange} /> Não
+          <span className="textointerno"> Impede a entrega?</span>
+          <div className="radios_status">
+            <input type="radio" id="ocorridoGravidadeSim" name="impedeEntrega" value="Sim" onChange={handleChange} />
+            <label htmlFor="impedeEntrega">Sim</label>
+            <input type="radio" id="ocorridoGravidadeNao" name="impedeEntrega" value="Não" onChange={handleChange} />
+            <label htmlFor="impedeEntrega">Não</label>
+          </div>
         </div>
 
         <span className="titulo"> Registros da ocorrência</span>
@@ -105,13 +112,11 @@ export default function Ocorrencia() {
             value={formData.detalhesOcorrencia}
             onChange={handleChange}
           />{' '}
-          <br />
         </div>
 
         <div className="button">
           <button className="ButtonE" type="submit">
-            {' '}
-            Enviar{' '}
+            Enviar
           </button>
         </div>
       </form>
@@ -125,8 +130,6 @@ export default function Ocorrencia() {
           </button>
         </div>
       )}
-      <br />
-      <br />
     </div>
   );
 }

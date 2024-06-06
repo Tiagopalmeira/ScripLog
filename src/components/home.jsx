@@ -39,9 +39,9 @@ export default function Home() {
       </nav>
 
       {/* Main content */}
-      <main>
+      <main className="main">
         {/* Botões */}
-        <h6 className="desejo">O que deseja hoje?</h6> <br />
+        <h6 className="desejo">O que deseja hoje?</h6>
         <div className="grid-container">
           <button className="square-button" onClick={() => handlePageChange('FormEnvio')}>
             <FcInspection size={64} />

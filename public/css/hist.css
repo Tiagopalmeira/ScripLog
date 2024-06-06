@@ -1,19 +1,16 @@
 .topo {
-  padding-top: 1%;
-  padding-bottom: 1%;
   align-items: center;
   text-align: center;
   font-size: 100%;
   background-color: #120f9e;
   color: #ffffff;
-  margin-bottom: 10px;
   height: auto;
   width: 100%;
+  position: fixed;
   margin: 0;
-  position: fixed; /* Define a posição fixa */
-  top: 0; /* Fixa a barra de navegação no topo */
-  left: 0; /* Fixa a barra de navegação na lateral esquerda */
-  z-index: 1000; /* Garante que a barra de navegação esteja acima de outros elementos */
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .navbar h2 {
@@ -22,7 +19,7 @@
 }
 .container {
   font-family: Arial, sans-serif;
-  max-width: 800px;
+  width: 80%;
   margin: 0 auto;
   padding: 20px;
 }
