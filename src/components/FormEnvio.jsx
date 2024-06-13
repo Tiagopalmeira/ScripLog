@@ -64,14 +64,14 @@ export default function FormEnvio() {
       {showQRScanner && <QRScanner />}
 
       <form onSubmit={handleSubmit}>
-        <span className="titulo">Situação:</span>
+        <span className="titulo">Dados da entrega:</span>
         <div className="box">
           <ul>
             <li>
-              <span className="textointerno"> Razão social:</span>
-              <input type="text" className="inputtext" placeholder="Digite a razão social da empresa." />
-              <span className="textointerno"> CNPJ:</span>
-              <input type="text" className="inputtext" placeholder="Digite o CNPJ da empresa." />
+              <span className="textointerno"> Conferente:</span>
+              <input type="text" className="inputtext" placeholder="Digite o nome completo do conferente" />
+              <span className="textointerno"> CPF: </span>
+              <input type="text" className="inputtext" placeholder="Digite o CPF do conferente." />
             </li>
           </ul>
         </div>
