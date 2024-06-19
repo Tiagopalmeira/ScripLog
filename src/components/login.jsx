@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../public/css/login.css';
 import '@fortawesome/fontawesome-free/css/all.css';
+import Logo from '/assets/logo.svg';
 import { FaCircleUser, FaLock } from 'react-icons/fa6';
 
 export default function Login({ login }) {
@@ -20,7 +21,7 @@ export default function Login({ login }) {
         <div className="balao3"></div>
         <div className="balao4"></div>
 
-        <img src="../public/assets/logo.svg" className="imglogo" alt="logo" />
+        <img src={Logo} className="imglogo" alt="logo" />
         <ul>
           <li>
             <FaCircleUser className="iconInput" />
@@ -37,8 +38,9 @@ export default function Login({ login }) {
         </button>
 
         <div className="aviso">
+          <span>Problemas ao acessar?</span>
           <span>
-            Problemas ao acessar? Entre em contato com o seu administrador:
+            Entre em contato com o seu administrador:
             <a href="https://wa.me/+5571986924559" title="Acesse aqui">
               Acesse aqui
             </a>

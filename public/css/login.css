@@ -129,19 +129,28 @@
 }
 
 .aviso {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #000;
   text-align: center;
-  font-size: 100%;
+  font-size: 0.8rem;
+  background-color: #0000007c;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
 }
 
 .aviso span {
-  padding: 0.5rem;
   border-radius: 1rem;
 }
 
 .aviso a {
+  padding-left: 0.1rem;
   color: rgb(16, 153, 177);
+  font-weight: bold;
 }
 
 .copyrights {

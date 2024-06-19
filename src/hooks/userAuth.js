@@ -9,6 +9,7 @@ export const useAuth = () => {
   const login = (registro, senha) => {
     if (registro === 'admin' && senha === 'admin') {
       setIsLoggedIn(true);
+      localStorage.setItem('isLoggedIn', JSON.stringify(true));
     } else {
       alert('Número de cadastro ou senha incorretos.');
     }
