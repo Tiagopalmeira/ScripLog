@@ -12,6 +12,10 @@ export default function Home({ logout }) {
     setCurrentPage(page);
   };
 
+  const handleLogout = () => {
+    logout();
+  };
+
   const renderCurrentPage = () => {
     switch (currentPage) {
       case 'FormEnvio':
@@ -30,7 +34,7 @@ export default function Home({ logout }) {
       {currentPage == '' && (
         <nav className="navbar">
           <h2>Seja bem vindo, motorista Tiago</h2>
-          <button onClick={logout}>Sair</button>
+          <button onClick={handleLogout}>Sair</button>
         </nav>
       )}
 
