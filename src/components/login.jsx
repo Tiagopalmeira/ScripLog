@@ -1,13 +1,19 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 import '../../public/css/login.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import { FaCircleUser, FaLock } from 'react-icons/fa6';
 
-export default function Login() {
+export default function Login({ login }) {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const registro = event.target.registro.value;
+    const senha = event.target.senha.value;
+    login(registro, senha);
+  };
+
   return (
-    <div className="max">
-      <div className="container">
+    <div className="containerLogin">
+      <form onSubmit={handleSubmit}>
         <div className="balao1"></div>
         <div className="balao2"></div>
 
@@ -17,29 +23,22 @@ export default function Login() {
         <img src="../public/assets/logo.svg" className="imglogo" alt="logo" />
         <ul>
           <li>
-            <span style={{ marginRight: '5px' }}>
-              <FaCircleUser />
-            </span>
-            <input type="text" className="registro" placeholder="Número de cadastro" />
+            <FaCircleUser className="iconInput" />
+            <input type="text" name="registro" className="registro" placeholder="Número de cadastro" />
           </li>
           <li>
-            <span style={{ marginRight: '5px' }}>
-              {' '}
-              <FaLock />
-            </span>{' '}
-            {/* Adiciona margem à direita do ícone */}
-            <input type="password" className="senha" placeholder="Senha de cadastro" />
+            <FaLock className="iconInput" />
+            <input type="password" name="senha" className="senha" placeholder="Senha de cadastro" />
           </li>
         </ul>
 
-        <button OnClick=" Checar os dados do input aqui. " className="acessar">
-          {' '}
-          Entrar{' '}
+        <button type="submit" className="acessar">
+          Entrar
         </button>
 
         <div className="aviso">
           <span>
-            Problemas ao acessar? entre em contato com o seu administrador:{' '}
+            Problemas ao acessar? Entre em contato com o seu administrador:
             <a href="https://wa.me/+5571986924559" title="Acesse aqui">
               Acesse aqui
             </a>
@@ -49,7 +48,7 @@ export default function Login() {
         <div className="copyrights">
           <span>Copyrights: Tiago Palmeira - Tiago Vinicius - Emboés Logistica</span>
         </div>
-      </div>
+      </form>
     </div>
   );
 }

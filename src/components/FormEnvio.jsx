@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import QRScanner from './LeituraCodigo';
 import { FcInspection } from 'react-icons/fc';
 import { AiOutlineBarcode } from 'react-icons/ai';
-import Accordion1 from './accordion'; // Importe o componente Accordion
-import Ocorrencia from './RegistroOCR'; // Importe o componente de ocorrência
+import Accordion1 from './accordion';
+import Ocorrencia from './RegistroOCR';
 import '../../public/css/form.css';
 
 export default function FormEnvio() {
   const [showQRScanner, setShowQRScanner] = useState(false);
   const [entregue, setEntregue] = useState(false);
   const [naoRealizada, setNaoRealizada] = useState(false);
-  const [enviado, setEnviado] = useState(false); // Estado para controlar se o formulário foi enviado com sucesso
+  const [enviado, setEnviado] = useState(false);
 
   const handleShowQRScanner = () => {
     setShowQRScanner(true);
@@ -35,14 +35,14 @@ export default function FormEnvio() {
     console.log('Formulário enviado!');
     setEnviado(true);
     window.alert('Tudo Ok! Seu formulário foi enviado.');
-    event.target.reset(); // Limpa o formulário após o envio bem-sucedido
+    event.target.reset();
   };
 
   const handleReturnHome = () => {
-    setShowQRScanner(false); // Fecha o formulário
-    setEnviado(false); // Reseta o estado de enviado
-    setEntregue(false); // Reseta o estado de entregue
-    setNaoRealizada(false); // Reseta o estado de naoRealizada
+    setShowQRScanner(false);
+    setEnviado(false);
+    setEntregue(false);
+    setNaoRealizada(false);
   };
 
   return (
@@ -98,7 +98,6 @@ export default function FormEnvio() {
         <span className="titulo"> Registros da entrega:</span>
         <div className="box">
           <div className="box_upload">
-            {/* Remoção do <br/> e ajuste com gap*/}
             <span className="textointerno"> Foto canhoto: </span>
             <input type="file" accept="image/*" className="upload" />
           </div>

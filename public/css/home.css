@@ -8,15 +8,30 @@
 
 /* Estilos para a barra de navegação */
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #120f9e;
   width: 100%;
   padding: 10% 0;
   h2 {
-    padding: 0 0 0 5%;
     font-size: 1rem;
   }
 }
+
+.navbar button {
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  background-color: #ff0033;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .main {
   display: flex;
   flex-direction: column;

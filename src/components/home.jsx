@@ -1,21 +1,18 @@
 import React, { useState } from 'react';
-import { FcCollaboration, FcInspection, FcList, FcClock } from 'react-icons/fc';
-import Login from './login';
+import { FcCollaboration, FcInspection, FcClock, FcHome } from 'react-icons/fc';
 import FormEnvio from './FormEnvio';
 import RegistroOCR from './RegistroOCR';
 import Historico from './Hist';
-import ContatoWhatsApp from './ContatoWhatsapp'; // Importe o componente ContatoWhatsApp aqui
+import ContatoWhatsApp from './ContatoWhatsapp';
 import '../../public/css/home.css';
 
-export default function Home() {
-  const [currentPage, setCurrentPage] = useState(null); // Estado para controlar a página atual
+export default function Home({ logout }) {
+  const [currentPage, setCurrentPage] = useState(null);
 
-  // Função para alterar a página atual com base no botão clicado
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
 
-  // Função para renderizar a página atual
   const renderCurrentPage = () => {
     switch (currentPage) {
       case 'FormEnvio':
@@ -33,16 +30,18 @@ export default function Home() {
 
   return (
     <div>
-      {/* Navbar */}
       <nav className="navbar">
         <h2>Seja bem vindo, motorista Tiago</h2>
+        <button onClick={logout}>Sair</button>
       </nav>
 
-      {/* Main content */}
       <main className="main">
-        {/* Botões */}
         <h6 className="desejo">O que deseja hoje?</h6>
         <div className="grid-container">
+          <button className="square-button" onClick={() => handlePageChange('')}>
+            <FcHome size={64} />
+            <span>Inicio</span>
+          </button>
           <button className="square-button" onClick={() => handlePageChange('FormEnvio')}>
             <FcInspection size={64} />
             <span>Enviar NFE</span>
@@ -56,7 +55,6 @@ export default function Home() {
             <span>Falar com suporte</span>
           </button>
         </div>
-        {/* Renderizar a página atual */}
         {renderCurrentPage()}
       </main>
     </div>

@@ -2,11 +2,10 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import Login from './components/login';
 import Home from './components/home';
-import Historico from './components/Hist';
-import FormEnvio from './components/FormEnvio';
-import Ocorrencia from './components/RegistroOCR';
-import QRScanner from './components/LeituraCodigo';
+import { useAuth } from './hooks/userAuth.js';
 
 export default function App() {
-  return <Home />;
+  const { isLoggedIn, login, logout } = useAuth();
+
+  return <div>{isLoggedIn ? <Home logout={logout} /> : <Login login={login} />}</div>;
 }
