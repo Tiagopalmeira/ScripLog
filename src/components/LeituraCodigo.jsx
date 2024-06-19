@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Html5QrcodeScanner } from 'html5-qrcode'; // Importa o componente Html5QrcodeScanner
 import '../../public/css/form.css'; // Importa o arquivo de estilos CSS
 
-function QRScanner() {
+function QRScanner({ onInputChange }) {
   const [isCameraActive, setIsCameraActive] = useState(false);
   const [qrCodeText, setQrCodeText] = useState('');
 
@@ -22,6 +22,7 @@ function QRScanner() {
     html5QrCodeScanner.render(
       (decodedText, decodedResult) => {
         setQrCodeText(decodedText);
+        onInputChange(decodedText);
       },
       (errorMessage) => {
         console.error('Erro ao escanear: ' + errorMessage);
@@ -51,6 +52,7 @@ function QRScanner() {
       { videoSource: file },
       (decodedText, decodedResult) => {
         setQrCodeText(decodedText);
+        onInputChange(decodedText);
       },
       (errorMessage) => {
         console.error('Erro ao escanear o arquivo: ', errorMessage);
@@ -81,7 +83,7 @@ function QRScanner() {
         type="text"
         className="inputtext"
         value={qrCodeText}
-        onChange={(e) => setQrCodeText(e.target.value)}
+        onChange={(e) => (setQrCodeText(e.target.value), onInputChange(e.target.value))}
         placeholder="Insira ou leia os dados da NFE:"
       />
     </div>

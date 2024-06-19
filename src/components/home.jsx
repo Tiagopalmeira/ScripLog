@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { FcCollaboration, FcInspection, FcClock, FcHome } from 'react-icons/fc';
 import FormEnvio from './FormEnvio';
-import RegistroOCR from './RegistroOCR';
 import Historico from './Hist';
 import ContatoWhatsApp from './ContatoWhatsapp';
 import '../../public/css/home.css';
 
 export default function Home({ logout }) {
-  const [currentPage, setCurrentPage] = useState(null);
+  const [currentPage, setCurrentPage] = useState('');
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -17,8 +16,6 @@ export default function Home({ logout }) {
     switch (currentPage) {
       case 'FormEnvio':
         return <FormEnvio />;
-      case 'RegistroOCR':
-        return <RegistroOCR />;
       case 'Historico':
         return <Historico />;
       case 'ContatoWhatsApp':
@@ -30,10 +27,12 @@ export default function Home({ logout }) {
 
   return (
     <div>
-      <nav className="navbar">
-        <h2>Seja bem vindo, motorista Tiago</h2>
-        <button onClick={logout}>Sair</button>
-      </nav>
+      {currentPage == '' && (
+        <nav className="navbar">
+          <h2>Seja bem vindo, motorista Tiago</h2>
+          <button onClick={logout}>Sair</button>
+        </nav>
+      )}
 
       <main className="main">
         <h6 className="desejo">O que deseja hoje?</h6>

@@ -1,49 +1,55 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import '../../public/css/hist.css';
+
 const Historico = () => {
-  const historicoData = [
-    { id: '1', codigo: '158985', tipo: 'NFE' },
-    { id: '2', codigo: 'Pneu furado', tipo: 'OCR' },
-    { id: '3', codigo: '158985', tipo: 'NFE' },
-    { id: '4', codigo: 'Produtos vencidos', tipo: 'OCR' },
-    { id: '5', codigo: '158985', tipo: 'NFE' },
-    { id: '6', codigo: '152145', tipo: 'NFE' },
-    { id: '7', codigo: '152145', tipo: 'NFE' },
-    { id: '8', codigo: '152145', tipo: 'NFE' },
-    { id: '9', codigo: 'Pneu furado', tipo: 'OCR' },
-    { id: '10', codigo: '158985', tipo: 'NFE' },
-    { id: '11', codigo: 'Produtos vencidos', tipo: 'OCR' },
-    { id: '12', codigo: '158985', tipo: 'NFE' },
-    { id: '13', codigo: '152145', tipo: 'NFE' },
-    { id: '14', codigo: 'Pneu furado', tipo: 'OCR' },
-    { id: '15', codigo: '158985', tipo: 'NFE' },
-    { id: '16', codigo: '158985', tipo: 'NFE' },
-    { id: '17', codigo: 'Pneu furado', tipo: 'OCR' },
-    { id: '18', codigo: '152145', tipo: 'NFE' },
-    { id: '19', codigo: '158985', tipo: 'NFE' },
-    { id: '20', codigo: 'Produtos vencidos', tipo: 'OCR' },
-  ];
+  const [historicoData, setHistoricoData] = useState([]);
+  console.log(historicoData);
+
+  const apiUrl = import.meta.env.VITE_API_URL;
+
+  const token = localStorage.getItem('token');
+
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'multipart/form-data',
+    },
+  };
+
+  useEffect(() => {
+    async function fetchHistoricoData() {
+      try {
+        const response = await axios.get(`${apiUrl}/deliveries`, config);
+        setHistoricoData(response.data);
+      } catch (error) {
+        console.error('Erro ao buscar histórico:', error);
+      }
+    }
+
+    fetchHistoricoData();
+  }, []);
 
   return (
-    <div className="container">
+    <div className="container-hist">
       <div className="topo">
         <h1>Histórico</h1>
       </div>
-      <h3>Históricos recentes:</h3>
+      <h3 className="table-title">Históricos recentes:</h3>
       <table className="historico-table">
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Código</th>
-            <th>Tipo</th>
+            <th>Status</th>
+            <th>Data de Entrega</th>
+            <th>Número NFE</th>
           </tr>
         </thead>
         <tbody>
-          {historicoData.map((item) => (
-            <tr key={item.id}>
-              <td>{item.id}</td>
-              <td>{item.codigo}</td>
-              <td>{item.tipo}</td>
+          {historicoData.map((entrega, index) => (
+            <tr key={index}>
+              <td>{entrega.notaFiscal.statusFinal ? 'Entregue' : 'Não entregue'}</td>
+              <td>{entrega.notaFiscal.dataEntrega}</td>
+              <td>{entrega.notaFiscal.numeroNFE}</td>
             </tr>
           ))}
         </tbody>
