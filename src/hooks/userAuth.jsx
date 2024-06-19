@@ -38,7 +38,6 @@ export const useAuth = () => {
 
   const logout = () => {
     setIsLoggedIn(false);
-    localStorage.setItem('isLoggedIn', JSON.stringify(false));
     localStorage.removeItem('token');
     setToken('');
   };
